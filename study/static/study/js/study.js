@@ -47,8 +47,9 @@ new Vue({
         },
         startChange: function() {
             this.clickDiv += 1
-            if (this.user.name == 'unknown') {
-                console.log('user unknown, I\'m exit now')
+            console.log(this.words.length)
+            if (this.words.length == 0) {
+                alert('на данный момент, у вас нет слов для изучения, вам надо их добавить, узнайте как это сделать на стартовой странице')
                 return
             }else if (this.clickDiv >= 2) {
                 console.log('no sense do it again')

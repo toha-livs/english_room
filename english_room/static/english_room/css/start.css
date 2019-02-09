@@ -32,9 +32,16 @@ p {
     width: 35%;
     margin-left: 28%;
 }
-.labl_inf {
+.labl_inf1 {
     color: #c7616b;
 }
+.labl_inf2 {
+    color: #6999d8;
+}
+.labl_inf3 {
+    color: #b3ac46;
+}
+
 .list {
     border: 2px solid #131212;
     border-radius: 10px;

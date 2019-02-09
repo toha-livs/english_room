@@ -7,8 +7,7 @@ from main.models import RelationWord
 @login_required
 def study(request):
     if request.method == 'GET':
-        words = RelationWord.objects.filter(user__id=request.user.id)
-        return render(request, 'study/study.html', {'words': words})
+        return render(request, 'study/study.html')
 
 
 @login_required
