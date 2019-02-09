@@ -1,0 +1,222 @@
+html{
+  position: relative;
+  min-height: 100%;
+}
+body {
+    background-color: #e6d0d0;
+}
+header {
+    color: #fbefef;
+    background-color: #b38686e0;
+    height: 60px;
+    box-shadow: 2px 0 5px 1px #505050;
+    padding-top: 0px;
+}
+.headr1, .headr2 {
+    display: inline;
+    width: 33.33333%;
+    padding-top: 10px;
+    color: #fbefef;
+}
+
+.headr2 {
+    margin-left: 33.333333%;
+}
+
+#zh {
+    margin-top: 100px;
+    width: 50%;
+}
+.btn-light {
+    color: #fbefef;
+    background-color: #c19696;
+    border-color: #e0b8b8;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.but_game {
+    margin-top: 70px;
+    border-radius: 19px;
+    border: 2px solid #ababab;
+    height: 50px;
+    font-size: 20px;
+    width: 35%;
+    background-color: #e6d0d0;
+    font-family: sans-serif, cursive;
+    color: #828181;
+}
+
+#app {
+    padding: 0;
+}
+.choice_div {
+    display: inline-block;
+    width: 49%;
+    margin-top: 150px;
+}
+.choice_btn {
+    background-color: #b17474c4;
+    border: 1px solid #d29999;
+    height: 50px;
+    width: 50%;
+    color: #fbefef;
+    font-size: larger;
+    border-radius: 10px;
+}
+#slider {
+    display: none;
+}
+#div_get_game {
+    display: none;
+}
+#game_vars {
+    display: none;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 150px;
+}
+#complete_div {
+    display: none;
+    margin-top: 200px;
+    font-size: 80px;
+    color: #756b6b;
+    width: 100%;
+}
+#word_game {
+    display: none;
+    font-size: 70px;
+    color: #ab8080;
+    text-transform: uppercase;
+}
+#div_of_vars {
+    display: none;
+    margin-top: 150px;
+}
+.divs_vars {
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    width: 23.833333%;
+    margin: 0 4%;
+    height: 50px;
+    border: 1px solid #cacaca;
+    color: #867f7f;
+    font-size: 20px;
+    overflow: hidden;
+    background-color: #c3c3c3;
+    padding: 7px 28px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 32px;
+    border-radius: 30px;
+    font-weight: inherit;
+    text-transform: lowercase;
+}
+#vars_1 {
+}
+#vars_2 {
+}
+#vars_3 {
+}
+
+/* для мобильных  */
+@media screen and (min-width:300px) and (max-width:800px) {
+   html {
+      -webkit-text-size-adjust: none;
+   }
+   .headr1 {
+        width: 30%;
+        text-align: left;
+   }
+   .headr2 {
+        width: 70%;
+        margin: 0;
+        text-align: right;
+   }
+   #slider {
+    margin-top:50px;
+    display: none;
+   }
+   .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+   }
+   #zh {
+        margin-left: 0;
+        width: 100%;
+        margin-top:130px;
+   }
+   .choice_btn {
+       width: 100%;
+   }
+   .divs_vars {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+   }
+   #div_of_vars {
+        margin-top: 100px;
+   }
+   .but_game {
+    margin-top: 70px;
+    border-radius: 19px;
+    border: 2px solid #ababab;
+    height: 50px;
+    font-size: 20px;
+    width: 60%;
+    background-color: #e6d0d0;
+    font-family: sans-serif, cursive;
+    color: #828181;
+    }
+    #game_vars {
+        width: 100%;
+        margin-top: 120px;
+        margin-left: 0;
+}
+}
+/* ползунок */
+.ui-widget.ui-widget-content {
+    border: 1px solid #cacaca;
+}
+
+.ui-widget-content {
+    height: 7px;
+    background: #bfbfbf;
+}
+#slider {
+    margin-top:50px;
+}
+#custom-handle {
+    width: 2.2em;
+    height: 2.2em;
+    top: -53%;
+    margin-top: -.8em;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.6em;
+    position: relative;
+    border: 2px solid #cccccc;
+    background: #c19696;
+}
+
+.value-wrapper {
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: -11px;
+    background: #808080;
+    border: 1px solid grey;
+    border-radius: 24px;
+    right: -10px;
+    color: #fbefef;
+}
+
+.value-wrapper::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 20px;
+  top: -16px;
+  border: 5px solid transparent;
+  border-bottom: 10px solid grey;
+}

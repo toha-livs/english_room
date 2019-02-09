@@ -1,0 +1,18 @@
+.progress-wrapper {
+    height: 38px;
+    background-color: #ccc;
+    border-radius: 30px;
+    padding: 4px;
+    width: 30%;
+}
+
+.progress-label {
+    height: 30px;
+    background-color: #43bf24;
+    border-radius: 30px;
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    color: #737373;
+}

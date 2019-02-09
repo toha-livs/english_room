@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Title</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'english_room/css/start.css' %}">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <header class="col-lg-12 text-right">
+                <div class="container-fluid">
+                    <div class="row text-center">
+                        {% if user.is_authenticated %}
+                        <a href="/logout/" class="headr1">
+                            <img src="{% static 'english_room/image/exit-door-symbol.png' %}">
+                        </a>
+                        <div class="headr2">
+                            <h2>{{ user.username }}</h2>
+                        </div>
+                        {% else %}
+                        <a href="/auth/" class="headr1">
+                            <h1><i class="fas fa-sign-in-alt"></i></h1>
+                        </a>
+                        <div class="headr2">
+                            <h2>unknown</h2>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+        </header>
+        <div class="col-lg-4 col-sm-12">
+            <div class="col-12 list">
+                <p>Игра</p><a href="/game/" class="icn"><i class="fas fa-external-link-alt"></i></a>
+                <label class="labl_inf" for="info_1"><i class="fas fa-dice"></i></label>
+                <div id="info_1">
+                    Укажи правильный перевод случайно выбранного слова из общей базы слов.
+                </div>
+                <label class="labl_inf" for="info_2"><i class="fas fa-dice-three"></i></label>
+                <div id="info_2">
+                    Еще один вид игры, только с товими словами.
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <div class="col-12 list">
+                <p>Повторение</p><a href="/study/" class="icn"><i class="fas fa-external-link-alt"></i></a>
+                <label class="labl_inf" for="info_3"><i class="fas fa-graduation-cap"></i></label>
+                <div id="info_3">
+                    <b>Кликни и учи</b>, ничего сложного, полезная штука для нудных мест, всегода сможешь себя занять чем-то полезным.
+                </div>
+                <label class="labl_inf" for="info_4"><i class="fas fa-align-left"></i></label>
+                <div id="info_4">
+                    Следи за прогрессом своего обучения. <small>(от прогресса зависит вероятность выпадания этого слова в игре, если прогресс 100%, оно уже не выпадет, будь уверен)</small>
+                </div>
+                <label class="labl_inf" for="info_5"><i class="fas fa-trash-alt"></i></label>
+                <div id="info_5">
+                    <b>Редактируй слова</b>, что выучил удаляй, что надоело удаляй.
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <div class="col-12 list">
+                <p>Еще слов</p><a href="/add-word/" class="icn"><i class="fas fa-external-link-alt"></i></a>
+                <label class="labl_inf" for="info_3"><i class="fas fa-tasks"></i></label>
+                <div id="info_6">
+                    Добавляй слова к себе в список, чтобы более продуктивно обучаться.
+                </div>
+                <label class="labl_inf" for="info_4"><i class="fas fa-database"></i></label>
+                <div id="info_7">
+                    Можно добавлять слова и в общую базу конечно! <small>но пжлст, добавляй с умом, этими словами будут пользоваться все</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

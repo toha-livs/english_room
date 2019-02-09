@@ -1,0 +1,113 @@
+body {
+    background-color: #171414;
+}
+.myclass-inp {
+    background-color: #1d1d1d;
+    color: #9c9b9b;
+    border: 1px solid #c5c5c5;
+    border-radius: 0 5px 5px 0;
+    height: 45px
+}
+
+.headrer {
+    display: inline-block;
+    height: 50px;
+    width: 48%;
+    color: #efefef;
+}
+#swich {
+}
+#hzhz {
+    margin-left: 60%;
+    width: 40%;
+    color: #cdd239;
+    font-size: 30px;
+    background-color: #efefef;
+    border-radius: 15px;
+    padding: 7px;
+    padding-left: 20px;
+}
+#hzhz1 {
+    margin-left: 60%;
+    display: none;
+    width: 40%;
+    color: #171414;
+    font-size: 30px;
+    background-color: #171414;
+    border-radius: 15px;
+    padding: 7px;
+    padding-left: 20px;
+}
+#info {
+    width: 100%;
+    font-size: 30px;
+    text-align: left;
+    color: #d0d8d6;
+    margin-top: 100px;
+}
+.error {
+    border: 2px solid #e64242;
+}
+.otst {
+    margin-top: 30px;
+}
+::placeholder {
+  color: blue;
+  font-size: 1.3em;
+}
+.inp_lab_div {
+    width: 85%;
+    padding: 0;
+}
+#repass {
+   display: none;
+}
+#signup_btn {
+    display: none;
+}
+.lable_inp {
+    width: 15%;
+    padding: 0;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px 0 0 5px;
+    font-size: 29px;
+    color: #d5e0dd;
+    padding-left: 10px;
+    background-color: #7b7575;
+    display: block-inline;
+}
+button {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #cdd239;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fbfbfb;
+    border: 2px solid #e2e2e2;
+    height: 46px;
+}
+@media screen and (min-width:300px) and (max-width:800px) {
+    .myclass-inp {
+        width: 100%;
+        border: 1px solid #c5c5c5;
+        border-radius: 0 5px 5px 0;
+        height: 45px
+    }
+    button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 35px;
+    }
+    #info {
+        margin-top: 150px;
+        font-size: 40px;
+        width: 100%;
+        font-weight: 500;
+        display: inline-block;
+    }
+    #hzhz, #hzhz1 {
+        padding-left: 13px;
+    }
+
+}

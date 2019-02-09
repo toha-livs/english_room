@@ -1,0 +1,150 @@
+.headr1, .headr2 {
+    display: inline;
+    width: 33.33333%;
+    padding-top: 10px;
+    color: #fbf6d1;
+}
+body {
+    background-color: #e4d98d;
+}
+header {
+    color: #fbefef;
+    background-color: #bdb054e0;
+    height: 60px;
+    box-shadow: 2px 0 5px 1px #505050;
+    padding-top: 0px;
+}
+
+.headr2 {
+    margin-left: 33.333333%;
+}
+#searcher {
+    border: 0;
+    background-color: #e4d98d;
+    width: 100%;
+    font-size: 30px;
+    outline:none;
+}
+#inp_search {
+    margin-top: 150px;
+    display: inline-block;
+    width: 69%;
+}
+#all_search {
+    border-bottom: 1px solid #a0933f;
+    width: 100%;
+}
+#icon_search {
+    display: inline-block;
+    font-size: 32px;
+    width: 29%;
+    margin-top: 150px;
+    color: #a0933f
+}
+.icon_div {
+    color: #73671b;
+    font-size: 30px;
+    padding-top: 20px;
+}
+#my {
+    color: #e4d98d;
+}
+.vars {
+    border-top: 1px solid #ccbe6a;
+    width: 90%;
+    margin-top: 6px;
+    border-radius: 4px;
+    padding: 6px;
+    color: #fbf6d1;
+    height: 42px;
+    font-size: 20px;
+    background-color: #c2b45a;
+    margin-left: 5%;
+}
+#add_database {
+    display: none;
+}
+
+input::-webkit-input-placeholder {
+color: #796c1f !important;
+font-family:sans-serif;
+margin-left:10px;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+color: #796c1f !important;
+font-family:sans-serif;
+margin-left:10px;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #796c1f !important;
+font-family:sans-serif;
+margin-left:10px;
+}
+
+input:-ms-input-placeholder {
+color: #796c1f !important;
+font-family:sans-serif;
+margin-left:10px;
+}
+.zh2 {
+    margin-top: 20px;
+}
+#confirm_db {
+    background-color: #ab9d46;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #f7f2ce;
+    margin-top:20px;
+}
+#category_db {
+background-color: #f3ebba;
+}
+.inp_db {
+    border: 0;
+    height: 45px;
+    width: 100%;
+    border-radius: 11px;
+    background-color: #e4d98d;
+    outline:none;
+}
+.label_db {
+    color: #e4d98d;
+    float: left;
+    font-size: 15px;
+}
+#and_db {
+    display: none;
+}
+/* телефон */
+@media screen and (min-width:300px) and (max-width:800px) {
+   html {
+      -webkit-text-size-adjust: none;
+   }
+   .headr1 {
+        width: 30%;
+        text-align: left;
+   }
+   .headr2 {
+        width: 70%;
+        margin: 0;
+        text-align: right;
+   }
+   #search {
+        width: 100%;
+        margin-left: 0;
+   }
+   #all_search {
+        width: 90%;
+        margin-left: 5%
+   }
+   .icon_div {
+        display: inline-block;
+        width: 50%;
+        margin: 0;
+   }
+   #add_database {
+    margin-left: 0;
+   }
+}

@@ -1,0 +1,19 @@
+.sloi {
+    background-color: #000;
+    border-radius: 12px;
+    height: 50px;
+    margin-top: 15px;
+    color: white;
+    display: none;
+}
+#title_ {
+    width: 100%;
+    height: 30px;
+    font-size: 21px;
+}
+#footer_ {
+    width: 100%;
+    font-size: 10px;
+    height: 20px;
+    color: #b3b3b3;
+}
