@@ -37,6 +37,8 @@ def sign_up(request):
     elif request.method == "POST" and request.is_ajax():
         logn = request.POST.get('login')
         password = request.POST.get('password')
+        if password == '':
+            raise Http404
         try:
             user = User.objects.get(username=logn)
         except ObjectDoesNotExist:

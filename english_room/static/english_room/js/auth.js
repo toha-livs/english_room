@@ -36,7 +36,7 @@ $(function() {
                 alert('окей, вы успешно зарегистрировались')
                 location.href = '/'
             }).fail(function() {
-                alert('этот логин уже используется')
+                alert('этот логин уже используется или вы забыли ввести пароль')
                 $('#password').add('#repassword').removeClass('error')
                 $('#login').addClass('error')
             })

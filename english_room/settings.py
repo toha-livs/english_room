@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from environ import secret
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'rttq688e5uo#!9(!6xu*6d)(t9bte^fr@1sim#ii=w=hgf2ext'
+SECRET_KEY = secret.SECTER_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -53,7 +54,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'audiofield.middleware.threadlocals.ThreadLocals',
 ]
 
 ROOT_URLCONF = 'english_room.urls'
@@ -78,19 +78,32 @@ TEMPLATES = [
 WSGI_APPLICATION = 'english_room.wsgi.application'
 
 
+#logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
+
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'english_room_db',
-        'USER': 'english_room',
-        'PASSWORD': 'qwerty',
-        'HOST': '178.62.201.26',
-        'PORT': '5432',
-    }
-}
+DATABASES = secret.DB
 
 
 # Password validation
@@ -112,21 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# EMAIL
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'toha.livs@gmail.com'
-EMAIL_HOST_PASSWORD = 'Toha-livs11'
-EMAIL_PORT = 587
-
-
-# Celery application definition
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TASK_SERIALIZER = 'json'
 
 
 # Internationalization

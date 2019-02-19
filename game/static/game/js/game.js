@@ -51,9 +51,9 @@ new Vue({
                   handle.text(ui.value);
                 }
             })
-            $('.choice_div').slideUp(100)
+            $('.choice_div').slideUp(300)
             setTimeout(function(){
-            $('#slider').add('#div_get_game').slideDown(100)}, 300)
+            $('#slider').add('#div_get_game').slideDown(300)}, 500)
         },
         getSlider1: function() {
             this.game_but = '1'
@@ -145,6 +145,12 @@ new Vue({
                                     }else{
                                         console.log(result.info)
                                         console.log(vues.game.id)
+//                                        console.log(result.info.word.name.length)
+                                        if (result.info.word.name.length >= 10) {
+                                            $('#word_game').css('font-size', '55px')
+                                        }else{
+                                            $('#word_game').css('font-size', '70px')
+                                        }
                                         vues.game.word_now = result.info.word
                                         vues.game.vars_1 = result.info.vars[0]
                                         vues.game.vars_2 = result.info.vars[1]

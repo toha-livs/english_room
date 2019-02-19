@@ -56,7 +56,8 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row text-center">
-                        <div class="en-word col-sm-6 col-lg-6">${ i.word } </div>
+                        <div class="en-word col-sm-6 col-lg-6" v-if="i.word.length <= 9">${ i.word } </div>
+                        <div class="en-word col-sm-6 col-lg-6" v-else="" :style="{fontSize: '35px'}">${ i.word } </div>
                         <div class="tr-word col-sm-6 col-lg-6"> ${ i.translate }</div>
                     </div>
                 </div>

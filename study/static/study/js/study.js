@@ -76,7 +76,7 @@ new Vue({
                     clm.animate({color:'#82a4c1'})
 
                     setTimeout(function() {
-                        clm.html(words[count]['word'] + '<br><br><p style="line-height: 40px;white-space: pre-wrap;overflow: hidden;text-overflow: ellipsis;">' + words[count]['translate'] + '</p>')
+                        clm.html(words[count]['word'] + '<br><br><p style="line-height: 40px; margin-bottom:0;white-space: pre-wrap;overflow: hidden;text-overflow: ellipsis;">' + words[count]['translate'] + '</p>')
                         clm.animate({color: colorR}, 300)
                         count ++
                         }, 500)
