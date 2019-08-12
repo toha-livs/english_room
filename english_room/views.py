@@ -1,9 +1,11 @@
 import uuid
 import time
 from django.contrib.auth.models import User
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout, login, authenticate
+from rest_framework.decorators import api_view
+
 from main.models import UserVerificate, Word
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -57,3 +59,4 @@ def test(requeest):
     for i in words:
         print(i.id)
     return HttpResponse({'status': 'success'})
+

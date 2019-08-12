@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import start, auth, logout_from, sign_up, test
+from .views import start, login, logout_from, sign_up, test
 from .routers import router
 
 from django.conf import settings
@@ -23,13 +23,14 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', start, name='start'),
-    path('auth/', auth, name='auth'),
-    path('logout/', logout_from, name='logout'),
-    path('sign-up/', sign_up, name='sign_in'),
-    path('test/', test, name='test'),
-    path('add-word/', include('main.urls')),
-    path('study/', include('study.urls')),
-    path('game/', include('game.urls')),
-    path('api/', include(router.urls)),
+    path('api/auth/', include('user.urls'))
+    # path('', start, name='start'),
+    # path('auth/', auth, name='auth'),
+    # path('logout/', logout_from, name='logout'),
+    # path('sign-up/', sign_up, name='sign_in'),
+    # path('test/', test, name='test'),
+    # path('add-word/', include('main.urls')),
+    # path('study/', include('study.urls')),
+    # path('game/', include('game.urls')),
+    # path('api/', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

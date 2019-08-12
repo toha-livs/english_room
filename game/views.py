@@ -5,7 +5,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.http import JsonResponse
 from django.shortcuts import render
 import uuid
-from selenium import webdriver
 import datetime
 from .models import Game, GameRound
 from main.models import Word, RelationWord
